@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-require('/init');
+require('./init');
 
 const movieSchema = mongoose.Schema({
   title: String,
@@ -7,4 +7,6 @@ const movieSchema = mongoose.Schema({
   yearReleased: Number
 })
 
-const Movie = mongoose.Model('Movie', movieSchema)
+const Movie = mongoose.model('Movie', movieSchema)
+
+module.exports = Movie
